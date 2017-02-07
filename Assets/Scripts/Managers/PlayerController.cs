@@ -22,15 +22,11 @@ public class PlayerController : MonoBehaviour {
                 StartCoroutine(Die());
         }
     }
-    private Animator thisAnimator;
+
+    public Animator deadAnimator;
 	
     void Awake()
     {
-        thisAnimator = this.gameObject.GetComponent<Animator>();
-
-        if (thisAnimator != null)
-            thisAnimator.enabled = false;
-
         DisableMeshRender();
     }
 
@@ -61,10 +57,9 @@ public class PlayerController : MonoBehaviour {
 
         GameManager.Notification.PostNotification(this, "OnPlayerDead");
 
-        if (thisAnimator != null)
+        if (deadAnimator != null)
         {
-            thisAnimator.enabled = true;
-            thisAnimator.SetTrigger("ShowDeath");
+            deadAnimator.SetTrigger("ShowDeath");
         }
 
         yield return new WaitForSeconds(respawnTime);
