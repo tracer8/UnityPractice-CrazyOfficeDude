@@ -40,7 +40,7 @@ public class PowerUp_Cash : MonoBehaviour {
 
     private void IncreaseCash()
     {
-
+        GameManager.Inventory.Cash += cashPerCollect;
     }
 
     private void DisappearCash()

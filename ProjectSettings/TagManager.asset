@@ -8,6 +8,7 @@ TagManager:
   - powerup_dollars
   - sounds
   - enemy
+  - AudioSource
   layers:
   - Default
   - TransparentFX

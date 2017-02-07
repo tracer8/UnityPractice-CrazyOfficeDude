@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(NotificationsManager))]
+[RequireComponent(typeof(InventoryManager))]
 
 public class GameManager : MonoBehaviour {
 
@@ -19,7 +20,6 @@ public class GameManager : MonoBehaviour {
     }
 
     private static NotificationsManager notification = null;
-    
     public static NotificationsManager Notification
     {
         get
@@ -28,6 +28,18 @@ public class GameManager : MonoBehaviour {
                 notification = instance.gameObject.GetComponent<NotificationsManager>();
 
             return notification;
+        }
+    }
+
+    private static InventoryManager inventory = null;
+    public static InventoryManager Inventory
+    {
+        get
+        {
+            if (inventory == null)
+                inventory = instance.gameObject.GetComponent<InventoryManager>();
+
+            return inventory;
         }
     }
 
