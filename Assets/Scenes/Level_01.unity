@@ -1197,6 +1197,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 591806957}
   - 114: {fileID: 591806958}
+  - 95: {fileID: 591806959}
   m_Layer: 0
   m_Name: Controls
   m_TagString: Untagged
@@ -1232,6 +1233,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PCController: {fileID: 733021088}
   MobileControler: {fileID: 1600542553}
+--- !u!95 &591806959
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 591806956}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d7e5346e435e99543a720cf168e0e111, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &603790877 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 95c8377ac31162a4ab6286c130f3a26e, type: 3}
@@ -1516,6 +1534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de415e2d08f453d49931377a999b88e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawnTime: 2
 --- !u!4 &764092625 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400006, guid: 414f6670db5bff04680ed1d786d08010, type: 2}
@@ -4372,6 +4391,14 @@ Prefab:
         type: 2}
       propertyPath: neutralHeadHeightPosition
       value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114000011334835952, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
