@@ -22,10 +22,13 @@ public class Billboard : MonoBehaviour {
 
         Vector3 lookatDirection;
         lookatDirection = cameraPosition - thisTransform.position;
-        lookatDirection.y = 0;
         lookatDirection.Normalize();
 
         // Rotate our object look at camera;
-        thisTransform.rotation = Quaternion.LookRotation(lookatDirection);
+        Quaternion newRotation = Quaternion.LookRotation(-lookatDirection);
+        newRotation.x = thisTransform.rotation.x;
+        newRotation.z = thisTransform.rotation.z;
+
+        thisTransform.rotation = newRotation;
     }
 }
