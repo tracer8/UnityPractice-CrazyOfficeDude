@@ -43,4 +43,6 @@ public class GameManager : MonoBehaviour {
             DontDestroyOnLoad(this.gameObject);
         }
     }
+
+    public bool IsAllowInput = true;
 }
